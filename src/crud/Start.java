@@ -12,8 +12,13 @@ public static void main(String[] args) {
 		aluno.setPagou(true);
 		aluno.inserirCurso();
 		aluno.listarCurso();
+		
 		aluno.editarCurso(4);
+		aluno.listarCurso();
+
 		aluno.deletarCurso(2);
+		aluno.listarCurso();
+
 		
 		System.out.println(aluno.getIdade());
 		System.out.println(aluno.getMatricula());
