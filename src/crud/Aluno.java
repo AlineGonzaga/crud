@@ -47,7 +47,7 @@ public class Aluno {
 		int i = 0;
 		System.out.println(" Cadastre seus cursos aqui. Mais comodidade para você.");
 		do {
-			System.out.println(" Escolha cursos: " + this.cursos[i]);
+			System.out.println(" Escolha cursos: " );
 			cursos[i] = sc.next();
 			i++;
 		}while(i < 5);
@@ -55,11 +55,11 @@ public class Aluno {
 		System.out.println(" Cadastro efetuado.");
 	}
 	
-	public String[] listarCurso(){
+	public void listarCurso(){
 		for( int i = 0; i < this.cursos.length; i++){
-			
+			System.out.println(" Cursos cadastrados: " + this.cursos[i]);
 		}
-		return this.cursos;
+		
 	}
 	
 	public void deletarCurso(int indice){
