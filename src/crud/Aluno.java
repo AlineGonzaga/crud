@@ -44,15 +44,12 @@ public class Aluno {
 	}
 
 	public void inserirCurso(String nome){
-		System.out.println(" Cadastre seus cursos aqui. Mais comodidade para você.");
+		System.out.println(" Cadastre seus cursos aqui.");
+		
 		for(int totalCursos = 0; totalCursos < cursos.length; totalCursos++){
-			if(totalCursos == 4){
-				System.out.println(" Quantidade de cursos chegou ao limite");
-			}
-			cursos[totalCursos] = nome;
+				cursos[totalCursos] = nome;
 		}
 	
-		System.out.println(" Cadastro efetuado.");
 	}
 	
 	public void listarCurso(){
