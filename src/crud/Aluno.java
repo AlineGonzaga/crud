@@ -70,15 +70,17 @@ public class Aluno {
 		}
 	}
 	
-	public void editarCurso(int indice){
-		System.out.println("Editando");
-		System.out.println(" Digite o novo nome: ");
-		String nome = sc.next();
-		
-		for(int i = 0; i < this.cursos.length; i++){
-			if(i == indice){
-				this.cursos[i] = nome;
+	public boolean editarCurso(String cursoModificar, String novoCurso){
+		for(String curso : cursos){
+			if(curso == cursoModificar){
+				curso = novoCurso;
+				return true;
 			}
 		}
+		return false;	
+	}	
+	
+	public boolean ChangedCurso(int indice, String novoCurso){
+		
 	}
 }
