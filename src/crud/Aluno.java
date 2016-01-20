@@ -43,14 +43,15 @@ public class Aluno {
 		this.idade = idade;
 	}
 
-	public void inserirCurso(){
-		int i = 0;
-		System.out.println(" Cadastre seus cursos aqui. Mais comodidade para você.");
-		do {
-			System.out.println(" Escolha cursos: " );
-			cursos[i] = sc.next();
-			i++;
-		}while(i < 5);
+	public void inserirCurso(String nome){
+		int totalCursos = 0;
+		System.out.println(" Cadastre seus cursos aqui. Mais comodidade para vocÃª.");
+		for(int i = 0; i < cursos.length; i++){
+			if(totalCursos == 4){
+				System.out.println(" Quantidade de cursos chegou ao limite");
+			}
+			cursos[totalCursos] = nome;
+		}
 	
 		System.out.println(" Cadastro efetuado.");
 	}
