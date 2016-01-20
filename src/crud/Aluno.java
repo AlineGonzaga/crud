@@ -81,10 +81,19 @@ public class Aluno {
 	}	
 	
 	public boolean ChangedCurso(int indice, String novoCurso){
-		if(indice < 0 || indice > 4){
+		if(indice < 0 || indice > 5){
 			return false;
 		}
   	 cursos[indice] = novoCurso;
   	 return true;
 	}
+	
+	public boolean removerCurso(){
+		int i= 0;
+		
+		cursos[i - 1] =null;
+		i--;
+		return true;
+	}
+	
 }
