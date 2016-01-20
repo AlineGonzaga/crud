@@ -44,9 +44,8 @@ public class Aluno {
 	}
 
 	public void inserirCurso(String nome){
-		int totalCursos = 0;
 		System.out.println(" Cadastre seus cursos aqui. Mais comodidade para você.");
-		for(int i = 0; i < cursos.length; i++){
+		for(int totalCursos = 0; totalCursos < cursos.length; totalCursos++){
 			if(totalCursos == 4){
 				System.out.println(" Quantidade de cursos chegou ao limite");
 			}
@@ -57,10 +56,9 @@ public class Aluno {
 	}
 	
 	public void listarCurso(){
-		for( int i = 0; i < this.cursos.length; i++){
-			System.out.println(" Cursos cadastrados: " + this.cursos[i]);
-		}
-		
+		 for(String curso : cursos){
+			 System.out.println(curso);
+		 }
 	}
 	
 	public void deletarCurso(int indice){
