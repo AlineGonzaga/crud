@@ -43,14 +43,21 @@ public class Aluno {
 		this.idade = idade;
 	}
 
-	public void inserirCurso(String nome){
+	public void inserirCurso(){
 		System.out.println(" Cadastre seus cursos aqui.");
+//		 int totalCursos = 0;
+//		 if (totalCursos == 5) {
+//		          System.out.println(" ERROR ");  // throw Exception("Quantidade de cursos chegou ao limite");
+//		    }
+//		    cursos[totalCursos] = nome;
+//		    totalCursos++;
 		
-		for(int totalCursos = 0; totalCursos < cursos.length; totalCursos++){
-				cursos[totalCursos] = nome;
+		for(int i =0; i<cursos.length; i++ ){
+			cursos[i] = sc.next();
 		}
-	
 	}
+	
+	
 	
 	public void listarCurso(){
 		 for(String curso : cursos){
@@ -67,14 +74,14 @@ public class Aluno {
 		}
 	}
 	
-	public boolean editarCurso(String cursoModificar, String novoCurso){
+	public void editarCurso(String cursoModificar, String novoCurso){
 		for(String curso : cursos){
-			if(curso == cursoModificar){
+			if(curso.equals(cursoModificar)){
 				curso = novoCurso;
-				return true;
+			
 			}
 		}
-		return false;	
+		
 	}	
 	
 	public boolean ChangedCurso(int indice, String novoCurso){

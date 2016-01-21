@@ -6,19 +6,17 @@ public static void main(String[] args) {
 		
 	    
 		AlunoPrivado aluno = new AlunoPrivado();
-		AlunoPrivado aluno2 = new AlunoPrivado();
+		
  		aluno.setIdade(20);
 		aluno.setMatricula("78654378");
 		aluno.setNome("Aline");
 		aluno.setPagou(true);
-	    aluno.inserirCurso("matematica");
-	    aluno.inserirCurso("historia");
-	    aluno.inserirCurso("ciencias");
-	    aluno.inserirCurso("informática");
-	    aluno.inserirCurso("português");
+	    aluno.inserirCurso();
 	    aluno.listarCurso();
-
-		
+	    aluno.ChangedCurso(1, "engenharia");
+	    aluno.listarCurso();
+	    aluno.editarCurso("engenharia", "TESTE");
+	    aluno.listarCurso();
 		
 		
 	
