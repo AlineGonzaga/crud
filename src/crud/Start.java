@@ -11,37 +11,24 @@ public static void main(String[] args) {
 		aluno.setMatricula("78654378");
 		aluno.setNome("Aline");
 		aluno.setPagou(true);
-		aluno.inserirCurso();
-		aluno.listarCurso();
-		
-		aluno.editarCurso(4);
-		aluno.listarCurso();
-
-		aluno.deletarCurso(2);
-		aluno.listarCurso();
+	    aluno.inserirCurso("matematica");
+	    aluno.inserirCurso("historia");
+	    aluno.inserirCurso("ciencias");
+	    aluno.inserirCurso("informÃ¡tica");
+	    aluno.inserirCurso("portuguÃªs");
+	    aluno.listarCurso();
 
 		
-		System.out.println(aluno.getIdade());
-		System.out.println(aluno.getMatricula());
-		System.out.println(aluno.getNome());
-		System.out.println(aluno.isPagou());
 		
 		
-		aluno2.setNome(" Celine ");
-		aluno2.setIdade(17);
-		aluno2.setMatricula("8574975");
-		aluno2.setPagou(true);
-		aluno2.inserirCurso();
-		aluno2.listarCurso();
-		aluno2.editarCurso(3);
-		aluno2.deletarCurso(0);
+	
 		
 		
-//		aluno.cursos[0] = "Matemática";
-//		aluno.cursos[1] = "Ciências";
-//		aluno.cursos[2] = "Química";
-//		aluno.cursos[3] = "História";
-//		aluno.cursos[4] = "Português";
+//		aluno.cursos[0] = "Matemï¿½tica";
+//		aluno.cursos[1] = "Ciï¿½ncias";
+//		aluno.cursos[2] = "Quï¿½mica";
+//		aluno.cursos[3] = "Histï¿½ria";
+//		aluno.cursos[4] = "Portuguï¿½s";
 		
 		
 		
