@@ -92,12 +92,12 @@ public class Aluno {
   	 return true;
 	}
 	
-	public boolean removerCurso(){
+	public void removerCurso(){
 		int i= 0;
 		
-		cursos[i - 1] =null;
+		cursos[i - 1] = null;
 		i--;
-		return true;
+		
 	}
 	
 }

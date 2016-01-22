@@ -12,13 +12,18 @@ public static void main(String[] args) {
 		aluno.setNome("Aline");
 		aluno.setPagou(true);
 	    aluno.inserirCurso();
+	    System.out.println();
 	    aluno.listarCurso();
+	    System.out.println();
 	    aluno.ChangedCurso(1, "engenharia");
+	 //   aluno.listarCurso();
+	//    aluno.editarCurso("engenharia", "TESTE");
 	    aluno.listarCurso();
-	    aluno.editarCurso("engenharia", "TESTE");
+	    System.out.println();
+	    aluno.removerCurso();
+	    System.out.println();
 	    aluno.listarCurso();
-		
-		
+
 	
 		
 		
