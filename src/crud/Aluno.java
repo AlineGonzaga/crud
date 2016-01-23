@@ -9,7 +9,7 @@ public class Aluno {
 	private int idade;
 	private String[] cursos = new String[5];
 	Scanner sc = new Scanner(System.in);
-	
+	private int totalCursos = 0;
 	public String[] getCursos() {
 		return cursos;
 	}
@@ -92,12 +92,13 @@ public class Aluno {
   	 return true;
 	}
 	
-	public void removerCurso(){
-		int i= 0;
-		
-		cursos[i - 1] = null;
-		i--;
-		
+	public boolean removerCurso(){
+		   if (totalCursos == 0) {
+		        return false;
+		    }
+		    cursos[totalCursos - 1] = null;
+		    totalCursos--;
+		    return true;
 	}
 	
 }
