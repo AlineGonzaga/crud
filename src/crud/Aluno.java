@@ -10,6 +10,7 @@ public class Aluno {
 	private String[] cursos = new String[5];
 	Scanner sc = new Scanner(System.in);
 	private int totalCursos = 0;
+	
 	public String[] getCursos() {
 		return cursos;
 	}
