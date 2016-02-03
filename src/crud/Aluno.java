@@ -19,13 +19,7 @@ public class Aluno {
 		this.cursos = cursos;
 	}
 
-	public Aluno(){
-		this.nome = nome;
-		this.matricula = "Aluno nao matriculado";
-		this.idade = 0;
-	}
-		
-	public String getNome() {
+		public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {

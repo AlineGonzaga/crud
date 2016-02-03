@@ -1,19 +1,14 @@
 package crud;
 
-public class AlunoPrivado extends Aluno implements ControleDeAluno{
+public class AlunoPrivado extends Aluno implements IControleDeAluno{
 
 	private boolean isPagou = true;
 
-	public boolean pagouMensalidade(){
-		return this.isPagou();
-	}
-	
-	
 	public AlunoPrivado(){
 		super();
 		
-		
 	}
+	
 	public boolean isPagou() {
 		return isPagou;
 	}
@@ -25,20 +20,15 @@ public class AlunoPrivado extends Aluno implements ControleDeAluno{
 	@Override
 	public void documentacao() {
 		System.out.println(" Vai precisar desses documentos:");
-		System.out.println("RG;");
-		System.out.println("Comprovante de residência;");
+		System.out.println(" RG; ");
+		System.out.println(" Comprovante de residÃªncia; ");
 		
 	}
 
 	@Override
-	public void matriculado() {
+	public boolean matriculado() {
 		System.out.println("Digite seu login:");
 		System.out.println("Digite a sua senha:");
-		
-	}
-
-	@Override
-	public boolean fezMatricula() {
 		
 		return true;
 	}

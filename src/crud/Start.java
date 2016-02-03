@@ -5,23 +5,23 @@ public class Start {
 public static void main(String[] args) {
 		
 	    AlunoPrivado aluno = new AlunoPrivado();
+	    
 		
- 		aluno.setIdade(20);
-		aluno.setMatricula("78654378");
-		aluno.setNome("Aline");
-		aluno.setPagou(true);
-	    aluno.inserirCurso();
-	    System.out.println();
-	    aluno.listarCurso();
-	    System.out.println();
-	    aluno.ChangedCurso(1, "engenharia");
-	 //   aluno.listarCurso();
-	//    aluno.editarCurso("engenharia", "TESTE");
-	    aluno.listarCurso();
-	    System.out.println();
-	    aluno.removerCurso();
-	    System.out.println();
-	    aluno.listarCurso();
-		
+	    //Utilizando o getCursos() para poder alterar o conteúdo do vetor
+	    aluno.getCursos()[0] = "Curso0";
+	    aluno.getCursos()[1] = "Curso1";
+	    aluno.getCursos()[2] = "Curso2";
+	    aluno.getCursos()[3] = "Curso3";
+	    aluno.getCursos()[4] = "Curso4";
+
+	    String[] novosCursos = new String[10];
+
+	    for(int i = 0; i < novosCursos.length; i++){
+	      novosCursos[i] = "Curso" + i;
+	    }
+	    //Utilizando o set para alterar o atributo alunos, passando
+	    //a referencia de um novo vetor criado acima
+	    aluno.setCursos(novosCursos);
 	}	
-}
+}	
+
