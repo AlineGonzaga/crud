@@ -67,13 +67,24 @@ public class Aluno {
 	
 	public boolean changeCurso(String cursoModificar, String cursoNovo) {
 	    for(String curso : cursos) {
-	        if (curso == cursoModificar) {
+	        if (curso.equals(cursoModificar) ) {
 	            curso = cursoNovo;
 	            return true;
 	        }
 	    }
 	    return false;
 	}
+	
+//  FUNCIONOU.	
+//	public boolean changeCurso(String cursoModificar, String cursoNovo) {
+//	for ( int i = 0; i < cursos.length; i++ ){
+//	    if ( cursos[i].equals(cursoModificar)) {
+//	        cursos[i] = cursoNovo;
+//	        return true;
+//	    }
+//	}
+//	return false;
+//}
 	
 	public boolean ChangedCurso(int indice, String novoCurso){
 		if(indice < 0 || indice > 5){
