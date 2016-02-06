@@ -9,7 +9,6 @@ public class Aluno {
 	private int idade;
 	private String[] cursos = new String[5];
 	Scanner sc = new Scanner(System.in);
-	private int totalCursos = 0;
 	
 	public String[] getCursos() {
 		return cursos;
@@ -37,22 +36,27 @@ public class Aluno {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+	private int  totalCursos = 0;
 
-	public void inserirCurso(){
-		System.out.println(" Cadastre seus cursos aqui.");
-//		 int totalCursos = 0;
-//		 if (totalCursos == 5) {
-//		          System.out.println(" ERROR ");  // throw Exception("Quantidade de cursos chegou ao limite");
-//		    }
-//		    cursos[totalCursos] = nome;
-//		    totalCursos++;
-		
-		for(int i =0; i<cursos.length; i++ ){
-			cursos[i] = sc.next();
-		}
+	public void addCurso(String curso) {
+	    if (totalCursos == 5) {
+	        System.out.println("Quantidade de cursos chegou ao limite");
+	    }
+	    cursos[totalCursos] = curso;
+	    totalCursos++;
 	}
 	
-	
+	//Se quiser adicionar vários:
+
+		public void addCursos(String ... listaCursos) {
+		    if (totalCursos > 5 - cursos.length) {
+		        System.out.println("Quantidade de cursos chegou ao limite");
+		    }
+		    for(String curso : listaCursos){
+		        cursos[totalCursos] = curso;
+		        totalCursos++;
+		    }
+		}
 	
 	public void listarCurso(){
 		 for(String curso : cursos){
@@ -60,24 +64,16 @@ public class Aluno {
 		 }
 	}
 	
-	public void deletarCurso(int indice){
-		System.out.println("Cancelando");
-		for(int i = 0; i < this.cursos.length; i++){
-			if(i == indice){
-				this.cursos[i] = " ";
-			}
-		}
-	}
 	
-	public void editarCurso(String cursoModificar, String novoCurso){
-		for(String curso : cursos){
-			if(curso.equals(cursoModificar)){
-				curso = novoCurso;
-			
-			}
-		}
-		
-	}	
+	public boolean changeCurso(String cursoModificar, String cursoNovo) {
+	    for(String curso : cursos) {
+	        if (curso == cursoModificar) {
+	            curso = cursoNovo;
+	            return true;
+	        }
+	    }
+	    return false;
+	}
 	
 	public boolean ChangedCurso(int indice, String novoCurso){
 		if(indice < 0 || indice > 5){
@@ -87,13 +83,18 @@ public class Aluno {
   	 return true;
 	}
 	
-	public boolean removerCurso(){
-		   if (totalCursos == 0) {
-		        return false;
-		    }
-		    cursos[totalCursos - 1] = null;
-		    totalCursos--;
-		    return true;
+	//entendi
+	public boolean removeUltimoCurso() {
+	    if (totalCursos == 0) {
+	        return false;
+	    }
+	    cursos[totalCursos - 1] = null;
+	    totalCursos--;
+	    return true;
 	}
-	
+	//entendi
+	public boolean removeTodosCursos() {
+	    cursos = new String[5];
+	    return true;
+	}
 }

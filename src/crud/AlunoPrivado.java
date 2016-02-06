@@ -2,7 +2,7 @@ package crud;
 
 public class AlunoPrivado extends Aluno implements IControleDeAluno{
 
-	private boolean isPagou = true;
+	private boolean isPagou;
 
 	public AlunoPrivado(){
 		super();
@@ -27,9 +27,7 @@ public class AlunoPrivado extends Aluno implements IControleDeAluno{
 
 	@Override
 	public boolean matriculado() {
-		System.out.println("Digite seu login:");
-		System.out.println("Digite a sua senha:");
-		
+		this.setPagou(true);
 		return true;
 	}
 }
